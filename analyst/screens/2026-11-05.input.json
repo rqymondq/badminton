@@ -1,0 +1,785 @@
+{
+  "as_of": "2026-11-05",
+  "companies": [
+    {
+      "ticker": "ROL",
+      "name": "Rollins Inc",
+      "insider": {
+        "purchase_value_usd": 99913330,
+        "n_buyers": 2,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 18350000000
+      },
+      "valuation": {
+        "pe": 35.09,
+        "sector_pe": 25.43
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 38.38,
+      "shares_outstanding": null,
+      "_sector": "Consumer Cyclical"
+    },
+    {
+      "ticker": "CRBG",
+      "name": "Corebridge Financial Inc",
+      "insider": {
+        "purchase_value_usd": 73554707,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": 0.0,
+        "q2_pct": 3.7
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 16150000000
+      },
+      "valuation": {
+        "pe": 7.69,
+        "sector_pe": 15.32
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 36.24,
+      "shares_outstanding": 440310000,
+      "_sector": "Financial"
+    },
+    {
+      "ticker": "BBTX",
+      "name": "Bambusa Therapeutics Inc",
+      "insider": {
+        "purchase_value_usd": 58639957,
+        "n_buyers": 3,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 799670000
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 35.21
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 16.07,
+      "shares_outstanding": null,
+      "_sector": "Healthcare"
+    },
+    {
+      "ticker": "MGM",
+      "name": "MGM Resorts International",
+      "insider": {
+        "purchase_value_usd": 51740827,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": -231.66,
+        "q2_pct": 2.24
+      },
+      "fcf": {
+        "fcf_ttm_usd": 1400000000.0,
+        "market_cap_usd": 8300000000
+      },
+      "valuation": {
+        "pe": 12.48,
+        "sector_pe": 25.43
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 32.82,
+      "shares_outstanding": 251600000,
+      "_sector": "Consumer Cyclical"
+    },
+    {
+      "ticker": "LYCA",
+      "name": "Lycia Therapeutics Inc",
+      "insider": {
+        "purchase_value_usd": 38522394,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 1670000000
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 35.21
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 28.92,
+      "shares_outstanding": null,
+      "_sector": "Healthcare"
+    },
+    {
+      "ticker": "LRN",
+      "name": "Stride Inc",
+      "insider": {
+        "purchase_value_usd": 31483168,
+        "n_buyers": 2,
+        "senior_buyer": false,
+        "any_sale": false,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 5.93,
+        "q2_pct": 10.8
+      },
+      "fcf": {
+        "fcf_ttm_usd": 504520000.0,
+        "market_cap_usd": 3330000000
+      },
+      "valuation": {
+        "pe": 10.92,
+        "sector_pe": 27.09
+      },
+      "sentiment": {
+        "upgrades": 0,
+        "downgrades": 0
+      },
+      "price": 79.24,
+      "shares_outstanding": 42030000,
+      "_sector": "Consumer Defensive"
+    },
+    {
+      "ticker": "MSM",
+      "name": "MSC Industrial Direct Co Inc",
+      "insider": {
+        "purchase_value_usd": 29034299,
+        "n_buyers": 2,
+        "senior_buyer": false,
+        "any_sale": false,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 3.11,
+        "q2_pct": 12.6
+      },
+      "fcf": {
+        "fcf_ttm_usd": 225160000.0,
+        "market_cap_usd": 6480000000
+      },
+      "valuation": {
+        "pe": 29.19,
+        "sector_pe": 33.98
+      },
+      "sentiment": {
+        "upgrades": 3,
+        "downgrades": 0
+      },
+      "price": 116.06,
+      "shares_outstanding": 55860000,
+      "_sector": "Industrials"
+    },
+    {
+      "ticker": "SIRI",
+      "name": "Sirius XM Holdings Inc",
+      "insider": {
+        "purchase_value_usd": 26894245,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": -0.75,
+        "q2_pct": -10.76
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 11240000000
+      },
+      "valuation": {
+        "pe": 13.48,
+        "sector_pe": 16.16
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 33.4,
+      "shares_outstanding": 337000000,
+      "_sector": "Communication Services"
+    },
+    {
+      "ticker": "GPI",
+      "name": "Group 1 Automotive Inc",
+      "insider": {
+        "purchase_value_usd": 24232209,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": -1.49,
+        "q2_pct": -9.36
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 3260000000
+      },
+      "valuation": {
+        "pe": 8.64,
+        "sector_pe": 25.43
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 272.81,
+      "shares_outstanding": 11950000,
+      "_sector": "Consumer Cyclical"
+    },
+    {
+      "ticker": "RAPP",
+      "name": "Rapport Therapeutics Inc",
+      "insider": {
+        "purchase_value_usd": 20359080,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 1240000000
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 35.21
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 25.93,
+      "shares_outstanding": null,
+      "_sector": "Healthcare"
+    },
+    {
+      "ticker": "DOLE",
+      "name": "Dole plc",
+      "insider": {
+        "purchase_value_usd": 12921444,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": -8.0,
+        "q2_pct": -8.33
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 1310000000
+      },
+      "valuation": {
+        "pe": 17.81,
+        "sector_pe": 27.09
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 13.83,
+      "shares_outstanding": 94460000,
+      "_sector": "Consumer Defensive"
+    },
+    {
+      "ticker": "SRRK",
+      "name": "Scholar Rock Holding Corp",
+      "insider": {
+        "purchase_value_usd": 11999922,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 5610000000
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 35.21
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 46.09,
+      "shares_outstanding": null,
+      "_sector": "Healthcare"
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel Corp",
+      "insider": {
+        "purchase_value_usd": 9709680,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 309710000000
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 27.58
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 58.27,
+      "shares_outstanding": null,
+      "_sector": "Technology"
+    },
+    {
+      "ticker": "GOLD",
+      "name": "Gold.com Inc",
+      "insider": {
+        "purchase_value_usd": 3927258,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": true
+      },
+      "surprise": {
+        "q1_pct": -13.54,
+        "q2_pct": 41.01
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 1210000000
+      },
+      "valuation": {
+        "pe": 14.18,
+        "sector_pe": 15.32
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 41.43,
+      "shares_outstanding": 29120000,
+      "_sector": "Financial"
+    },
+    {
+      "ticker": "ACN",
+      "name": "Accenture plc",
+      "insider": {
+        "purchase_value_usd": 3200889,
+        "n_buyers": 2,
+        "senior_buyer": true,
+        "any_sale": true,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 3.36,
+        "q2_pct": 2.46
+      },
+      "fcf": {
+        "fcf_ttm_usd": 11621000000.0,
+        "market_cap_usd": 156190000000
+      },
+      "valuation": {
+        "pe": 19.48,
+        "sector_pe": 27.58
+      },
+      "sentiment": {
+        "upgrades": 0,
+        "downgrades": 3
+      },
+      "price": 264.27,
+      "shares_outstanding": 595530000,
+      "_sector": "Technology"
+    },
+    {
+      "ticker": "NPB",
+      "name": "Northpointe Bancshares Inc",
+      "insider": {
+        "purchase_value_usd": 1722152,
+        "n_buyers": 2,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": -35.0,
+        "q2_pct": -11.76
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 558150000
+      },
+      "valuation": {
+        "pe": 7.57,
+        "sector_pe": 15.32
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 16.14,
+      "shares_outstanding": 34580000,
+      "_sector": "Financial"
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing Co",
+      "insider": {
+        "purchase_value_usd": 1508848,
+        "n_buyers": 2,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": -69.16,
+        "q2_pct": -141.48
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 140260000000
+      },
+      "valuation": {
+        "pe": 19.5,
+        "sector_pe": 33.98
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 177.0,
+      "shares_outstanding": 791900000,
+      "_sector": "Industrials"
+    },
+    {
+      "ticker": "CACC",
+      "name": "Credit Acceptance Corp",
+      "insider": {
+        "purchase_value_usd": 1455600,
+        "n_buyers": 1,
+        "senior_buyer": false,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 5060000000
+      },
+      "valuation": {
+        "pe": 16.29,
+        "sector_pe": 15.32
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 498.68,
+      "shares_outstanding": null,
+      "_sector": "Financial"
+    },
+    {
+      "ticker": "AN",
+      "name": "Autonation Inc",
+      "insider": {
+        "purchase_value_usd": 1431864,
+        "n_buyers": 3,
+        "senior_buyer": true,
+        "any_sale": false,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 0.6,
+        "q2_pct": 1.78
+      },
+      "fcf": {
+        "fcf_ttm_usd": 22900000.0,
+        "market_cap_usd": 5870000000
+      },
+      "valuation": {
+        "pe": 8.81,
+        "sector_pe": 25.43
+      },
+      "sentiment": {
+        "upgrades": 0,
+        "downgrades": 2
+      },
+      "price": 183.47,
+      "shares_outstanding": 32290000,
+      "_sector": "Consumer Cyclical"
+    },
+    {
+      "ticker": "TTMI",
+      "name": "TTM Technologies Inc",
+      "insider": {
+        "purchase_value_usd": 1342811,
+        "n_buyers": 2,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 7730000000
+      },
+      "valuation": {
+        "pe": 29.33,
+        "sector_pe": 27.58
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 73.38,
+      "shares_outstanding": null,
+      "_sector": "Technology"
+    },
+    {
+      "ticker": "TFC",
+      "name": "Truist Financial Corp",
+      "insider": {
+        "purchase_value_usd": 1209050,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": -53.83,
+        "q2_pct": 13.81
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 60970000000
+      },
+      "valuation": {
+        "pe": 13.13,
+        "sector_pe": 15.32
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 50.87,
+      "shares_outstanding": 1200000000,
+      "_sector": "Financial"
+    },
+    {
+      "ticker": "DINO",
+      "name": "HF Sinclair Corp",
+      "insider": {
+        "purchase_value_usd": 1108000,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": false,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 50.06,
+        "q2_pct": 18.27
+      },
+      "fcf": {
+        "fcf_ttm_usd": 3271000000.0,
+        "market_cap_usd": 17920000000
+      },
+      "valuation": {
+        "pe": 5.3,
+        "sector_pe": 11.75
+      },
+      "sentiment": {
+        "upgrades": 1,
+        "downgrades": 0
+      },
+      "price": 104.57,
+      "shares_outstanding": 172830000,
+      "_sector": "Energy"
+    },
+    {
+      "ticker": "UPBD",
+      "name": "Upbound Group Inc",
+      "insider": {
+        "purchase_value_usd": 1290672,
+        "n_buyers": 6,
+        "senior_buyer": true,
+        "any_sale": false,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 13.48,
+        "q2_pct": 0.0
+      },
+      "fcf": {
+        "fcf_ttm_usd": 433560000.0,
+        "market_cap_usd": 1410000000
+      },
+      "valuation": {
+        "pe": 12.73,
+        "sector_pe": 27.58
+      },
+      "sentiment": {
+        "upgrades": 0,
+        "downgrades": 0
+      },
+      "price": 24.14,
+      "shares_outstanding": 58300000,
+      "_sector": "Technology"
+    },
+    {
+      "ticker": "LSCC",
+      "name": "Lattice Semiconductor Corp",
+      "insider": {
+        "purchase_value_usd": 1003689,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 15230000000
+      },
+      "valuation": {
+        "pe": 338.76,
+        "sector_pe": 27.58
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 107.25,
+      "shares_outstanding": null,
+      "_sector": "Technology"
+    },
+    {
+      "ticker": "SITE",
+      "name": "SiteOne Landscape Supply Inc",
+      "insider": {
+        "purchase_value_usd": 1003685,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": 6.6,
+        "q2_pct": -4.69
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": 5100000000
+      },
+      "valuation": {
+        "pe": 31.09,
+        "sector_pe": 33.98
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 118.16,
+      "shares_outstanding": 43130000,
+      "_sector": "Industrials"
+    },
+    {
+      "ticker": "AIOK",
+      "name": "AI OKTO Corp",
+      "insider": {
+        "purchase_value_usd": 1059604,
+        "n_buyers": 1,
+        "senior_buyer": true,
+        "any_sale": null,
+        "ten_percent_owner_only": false
+      },
+      "surprise": {
+        "q1_pct": null,
+        "q2_pct": null
+      },
+      "fcf": {
+        "fcf_ttm_usd": null,
+        "market_cap_usd": null
+      },
+      "valuation": {
+        "pe": null,
+        "sector_pe": 11.75
+      },
+      "sentiment": {
+        "upgrades": null,
+        "downgrades": null
+      },
+      "price": 11.21,
+      "shares_outstanding": null,
+      "_sector": "Energy"
+    }
+  ]
+}
