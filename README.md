@@ -73,3 +73,7 @@ See `docs/LAUNCH_READINESS.md` for the full checklist.
 - Semantic landmarks, one `h1` per page, six act `h2`s, skip link, keyboard-operable instruments.
 - `prefers-reduced-motion` renders every scene in its final composition with no scrubbing or pinning.
 - Compact viewports swap overlaid labels for chip strips and stack the two-column spreads.
+
+## Also in this repository
+
+`analyst/` is a self-contained research-analyst system unrelated to the publication: a weekly, checked, sourced stock screen run by the Claude Code skills under `.claude/skills/`. It has its own README and touches nothing in the site.
