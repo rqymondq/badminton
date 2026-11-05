@@ -2,6 +2,7 @@
 
 import { useId, useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/motion";
+import { trackEvent } from "@/lib/analytics";
 import { ActHead } from "@/components/story/Act";
 import { Column, Prose, Ref, RegisterTag, Aside, Spread, Pull } from "@/components/story/Prose";
 
@@ -122,6 +123,8 @@ export function ActFour() {
               step={1}
               value={t}
               onChange={(e) => setT(Number(e.target.value))}
+              onPointerUp={() => trackEvent("instrument_lens_used", { leaning: t < 40 ? "rules" : t > 60 ? "loyalty" : "centre" })}
+              onKeyUp={() => trackEvent("instrument_lens_used", { leaning: t < 40 ? "rules" : t > 60 ? "loyalty" : "centre" })}
               className="lens"
               aria-valuetext={`${Math.round(100 - t)} percent equal rules, ${Math.round(t)} percent standing loyalty`}
             />

@@ -19,7 +19,7 @@ export function Sources() {
             <p className="mono-lc mt-6 max-w-[36ch] text-fg-3">
               {toVerify > 0 && (
                 <>
-                  Links marked <span className="text-accent">†</span> were compiled without live network access and should be checked before publication.
+                  Entries marked <span className="text-accent">†</span> have their citation details confirmed through indexes, but the linked page or quoted wording could not be opened from the build environment.
                 </>
               )}
             </p>

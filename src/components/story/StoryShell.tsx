@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export interface ActNav { id: string; numeral: string; title: string }
 
@@ -18,7 +19,11 @@ export function StoryShell({ acts, children }: { acts: ActNav[]; children: React
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id);
+        if (visible) {
+          setActive(visible.target.id);
+          const act = acts.find((a) => a.id === visible.target.id);
+          if (act) trackEvent("act_reached", { act: act.numeral });
+        }
       },
       { rootMargin: "-40% 0px -40% 0px", threshold: [0, 0.1, 0.5] },
     );

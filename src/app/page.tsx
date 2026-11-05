@@ -2,7 +2,14 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RingMark } from "@/components/RingMark";
+import { Invitation } from "@/components/Invitation";
+import type { Metadata } from "next";
 import { desks, investigations } from "@/content/investigations";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/", title: "Palimpsest — Something worth thinking about" },
+};
 
 export default function Home() {
   const featured = investigations[0];
@@ -113,6 +120,8 @@ export default function Home() {
             </ol>
           </div>
         </section>
+
+        <Invitation />
 
         {/* About, briefly */}
         <section id="about" data-surface="parchment" className="border-t border-rule px-[var(--gutter)] py-20 md:py-28">

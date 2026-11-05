@@ -99,13 +99,14 @@ export function ActTwo() {
               say it, and which questions are rude.
             </p>
             <p>
-              Some of this inheritance is measurable. In long-running panel studies, the political
-              leanings of parents predict those of their adult children, most reliably in households where
-              politics was discussed and both parents agreed.<Ref n={8} /> Among American adults raised in
-              a religion, most still identify with it; of those who leave, the largest group do not convert
-              but simply stop affiliating.<Ref n={10} /> Twin studies suggest that even some variation in
-              political attitudes has a heritable component, though how large, and what exactly is being
-              inherited, is disputed.<Ref n={9} />
+              Some of this inheritance is measurable. In a panel study that followed American families
+              across three generations, the political leanings of parents predicted those of their adult
+              children, and what transmitted best was the concrete, emotional, often-repeated attachment:
+              a party before a policy.<Ref n={8} /> Religion travels the same way. About eight in ten
+              American adults raised Protestant are still Protestant; six in ten raised Catholic are still
+              Catholic; one in five raised Catholic now claim no religion at all.<Ref n={10} /> Twin
+              studies suggest that even some of the variation in political attitudes is heritable, though
+              how much, and what exactly is inherited, is disputed.<Ref n={9} />
             </p>
             <p>
               Most of it is not measurable at all. The particular quiet of a particular house. Which
@@ -114,10 +115,10 @@ export function ActTwo() {
               feed that became, without a syllabus, a curriculum.
             </p>
             <p>
-              Two cautions. First, almost everything psychology knows about belief was learned from a
-              narrow slice of humanity: Western, educated, industrialised, rich, democratic
+              Two cautions. First, most of what psychology knows about belief was learned from a narrow
+              slice of humanity: Western, educated, industrialised, rich, democratic
               populations.<Ref n={11} /> Findings from that slice should not be assumed to describe
-              everyone. Second, nothing here means your beliefs are <em>merely</em> inherited. A belief
+              everyone. Second, none of this means your beliefs are <em>merely</em> inherited. A belief
               handed down can be true. A belief you arrived at alone can be false. Origin is not verdict.
             </p>
             <Pull>An inherited belief is not therefore wrong. But its origin is worth looking at, if only because you never had to.</Pull>

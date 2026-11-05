@@ -55,10 +55,18 @@ Claims in the text carry one of four registers, visible as small marks:
 
 ## Verification note
 
-The build environment had no access to external hosts, so every source link in
-`src/stories/what-you-believe/data.ts` is marked `verify: true` and rendered with a dagger.
-The references are real works cited by DOI or stable URL; the links themselves should be opened
-and confirmed before publication. See the delivery notes for the list of claims to check.
+Sources in `src/stories/what-you-believe/data.ts` were verified through indexes and publisher
+pages. Entries still marked `verify: true` (rendered with a dagger) have confirmed citation details
+but a link or quotation that could not be opened from the build environment. The remaining items
+are listed in `docs/LAUNCH_READINESS.md`.
+
+## Configuration
+
+Copy `.env.example` to `.env.local` (or set the variables in Vercel). All are optional:
+`NEXT_PUBLIC_SITE_URL` for share cards and the sitemap, the `NEXT_PUBLIC_NEWSLETTER_*`
+group to connect a mailing-list provider, `NEXT_PUBLIC_CONTACT_EMAIL` for the unconnected state.
+Vercel Web Analytics is included and needs only to be enabled in the Vercel project.
+See `docs/LAUNCH_READINESS.md` for the full checklist.
 
 ## Accessibility and motion
 

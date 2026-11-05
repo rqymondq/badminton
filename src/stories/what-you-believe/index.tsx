@@ -7,6 +7,7 @@ import { ActFour } from "./ActFour";
 import { ActFive } from "./ActFive";
 import { ActSix } from "./ActSix";
 import { Sources } from "./Sources";
+import { Invitation } from "@/components/Invitation";
 
 export const acts: ActNav[] = [
   { id: "act-i", numeral: "I", title: "The Question" },
@@ -42,6 +43,7 @@ export default function WhatYouBelieve() {
         <div aria-hidden className="h-[24svh] bg-gradient-to-b from-[#0e1220] via-[#5b4a3f] to-parchment" />
         <Act id="act-vi" numeral="VI" title="The Unfinished Mind" surface="parchment">
           <ActSix />
+          <Invitation />
           <Sources />
         </Act>
       </article>

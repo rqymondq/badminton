@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,11 +10,16 @@ export const metadata: Metadata = {
   },
   description:
     "An independent, Renaissance-inspired publication of interactive intellectual journalism. We don’t tell you what to think. We give you something worth thinking about.",
-  metadataBase: new URL("https://palimpsest.example"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     siteName: "Palimpsest",
     type: "website",
+    locale: "en_GB",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -32,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap, useGSAP, usePrefersReducedMotion } from "@/lib/motion";
+import { gsap, useGSAP, usePrefersReducedMotion, useIsCompact } from "@/lib/motion";
 
 /** Scrubbed state the scroll timeline writes and the draw loop reads. */
 interface SceneState { lurch: number; flash: number; reasons: number; steer: number; }
@@ -49,12 +49,12 @@ const beats = [
   },
   {
     k: "The reaction",
-    body: "Most people feel the verdict before they can say a sentence about it. In the 1993 study, whether people condemned the family depended more on where and how they had grown up than on any harm they could name.",
+    body: "The verdict tends to arrive before any sentence about it. In the 1993 study, students at elite universities mostly called this a matter of taste. Most other participants, across social classes in Brazil and the United States, called it wrong, and their feeling predicted that judgment better than any harm they could name.",
     note: "The feeling arrives whole. The elephant has already leaned.",
   },
   {
     k: "The reasons",
-    body: "Asked why, people reach for reasons: it is unhealthy, it is disrespectful, it would upset the children. When each reason is answered, the verdict usually stays. Haidt called the state that follows moral dumbfounding.",
+    body: "Asked why, people reach for reasons: it is unhealthy, it is disrespectful, it would upset the children. When each reason is answered, the verdict usually stays. Haidt and his colleagues later gave that state a name: moral dumbfounding.",
     note: "The rider explains where the elephant went.",
   },
   {
@@ -70,6 +70,7 @@ export function ElephantScene() {
   const state = useRef<SceneState>({ lurch: 0, flash: 0, reasons: 0, steer: 0 });
   const rider = useRef({ x: 300, y: 150 });
   const reduced = usePrefersReducedMotion();
+  const compact = useIsCompact(768);
 
   // Draw loop. Runs continuously (cheap: one path + a handful of attributes).
   useEffect(() => {
@@ -172,7 +173,7 @@ export function ElephantScene() {
   const figure = (
     <svg
       ref={svg}
-      viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
+      viewBox={compact ? "130 30 640 600" : `0 0 ${VIEW_W} ${VIEW_H}`}
       className="h-auto w-full max-h-[70svh]"
       role="img"
       aria-label="A large fluid vermilion form, the intuition, and a small lapis instrument above it, the reasoning. Lines connect them."
@@ -240,7 +241,7 @@ export function ElephantScene() {
   }
 
   return (
-    <div ref={scene} className="pin-scene h-[420svh]">
+    <div ref={scene} className="pin-scene h-[340svh] md:h-[380svh]">
       <div className="pin-frame">
         <div className="mx-auto grid h-full max-w-[1300px] grid-rows-[1fr_auto] gap-4 px-[var(--gutter)] py-6 lg:grid-cols-[1.25fr_1fr] lg:grid-rows-1 lg:items-center lg:gap-12">
           <div className="flex min-h-0 items-center">{figure}</div>

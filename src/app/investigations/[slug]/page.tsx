@@ -19,7 +19,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const inv = getInvestigation(slug);
   if (!inv) return {};
-  return { title: inv.title, description: inv.dek };
+  return {
+    title: inv.title,
+    description: inv.dek,
+    alternates: { canonical: `/investigations/${inv.slug}` },
+    openGraph: {
+      title: inv.title,
+      description: inv.dek,
+      type: "article",
+      publishedTime: inv.published,
+      section: inv.desk,
+      url: `/investigations/${inv.slug}`,
+    },
+    twitter: { card: "summary_large_image", title: inv.title, description: inv.dek },
+  };
 }
 
 export default async function InvestigationPage({ params }: { params: Promise<{ slug: string }> }) {

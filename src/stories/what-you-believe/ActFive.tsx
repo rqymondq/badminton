@@ -118,7 +118,7 @@ export function ActFive() {
       </Column>
 
       {/* The field */}
-      <div ref={scene} className={reduced ? "relative h-[100svh]" : "pin-scene h-[480svh]"}>
+      <div ref={scene} className={reduced ? "relative h-[100svh]" : "pin-scene h-[360svh] md:h-[400svh]"}>
         <div className="pin-frame">
           <p className="mono absolute left-[var(--gutter)] top-6 z-20 text-fg-3">
             Fragments <span aria-hidden className="mx-2">·</span> <span className="counter tabular-nums">004</span>
@@ -190,7 +190,7 @@ export function ActFive() {
                 And here, poor fool! with all my lore<br />
                 I stand, no wiser than before.
               </blockquote>
-              <p className="mono-lc mt-3 text-fg-3">Goethe, Faust I, lines 354–359.<Ref n={17} /></p>
+              <p className="mono-lc mt-3 text-fg-3">Goethe, Faust I, &ldquo;Night&rdquo;, lines 354–359 in the German numbering.<Ref n={17} /></p>
               <p className="mt-6 mb-2"><RegisterTag level="established" /> The illusion of explanatory depth.<Ref n={15} /></p>
               <p><RegisterTag level="editorial" /> The parallel between Faust&rsquo;s study and a modern feed is our reading, not Goethe&rsquo;s argument and not Haidt&rsquo;s.</p>
             </Aside>
@@ -205,12 +205,10 @@ export function ActFive() {
               him standing where he started.<Ref n={16} />
             </p>
             <p>
-              The connection to Haidt is not that Goethe anticipated moral psychology. It is an editorial
-              one, and it should be held as such. Faust’s learning was, in a sense, the inheritance of Act
-              II at its most refined: a complete set of approved ways of seeing. His crisis was the
-              discovery that a complete set of inherited answers is not the same as understanding. The
-              play’s response to that crisis is one we won’t spoil here. The question is the part that
-              travels.
+              The link to Haidt is ours, not Goethe’s. Faust’s learning was the inheritance of Act II
+              at its most refined: a complete set of approved ways of seeing. His crisis was the discovery
+              that a complete set of inherited answers is not the same as understanding. What the play does
+              with that crisis we won’t spoil. The question is the part that travels.
             </p>
             <p>
               Because the accumulation has not stopped. A reader today holds more information than any

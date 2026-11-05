@@ -3,6 +3,7 @@
 import { useId, useRef, useState } from "react";
 import { gsap, useGSAP, usePrefersReducedMotion } from "@/lib/motion";
 import { influenceWords } from "./data";
+import { trackEvent } from "@/lib/analytics";
 import { ActHead } from "@/components/story/Act";
 import { Column, Prose, Ref, RegisterTag, Aside, Pull } from "@/components/story/Prose";
 
@@ -44,11 +45,13 @@ export function ActSix() {
     if (!text) return;
     setKept({ text });
     setReleased(false);
+    trackEvent("instrument_ring", { action: "kept" }, false);
   };
   const release = () => {
     setReleased(true);
     setKept(null);
     setDraft("");
+    trackEvent("instrument_ring", { action: "released" }, false);
   };
 
   const n = influenceWords.length;

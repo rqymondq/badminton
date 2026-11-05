@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const cases = [
   {
@@ -65,6 +66,7 @@ export function FlashJudgement() {
       typed: tFirstKey.current > 0,
     });
     setPhase("result");
+    trackEvent("instrument_flash_completed", { case: c.id, typed: tFirstKey.current > 0 }, false);
   };
   const next = () => {
     setCaseIdx((i) => (i + 1) % cases.length);

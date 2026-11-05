@@ -139,7 +139,7 @@ export function ActOne() {
 
   return (
     <>
-      <div ref={scene} className="pin-scene h-[340svh] md:h-[380svh]">
+      <div ref={scene} className="pin-scene h-[270svh] md:h-[300svh]">
         <div ref={frame} className="pin-frame">
           {/* Act label */}
           <p className="mono absolute left-[var(--gutter)] top-[4.75rem] z-10 text-fg-3">

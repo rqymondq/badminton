@@ -22,8 +22,8 @@ export const influences: Influence[] = [
     label: "Family",
     tint: "vermilion",
     example:
-      "The first arguments you ever heard were someone else's. Children tend to share their parents' political leanings, most strongly in homes where politics is discussed often.",
-    note: "Established in panel studies; the strength of transmission varies a lot by family.",
+      "The first arguments you ever heard were someone else’s. Children tend to share their parents’ political leanings, and what transmits best is the concrete, emotional, often-repeated attachment: a party before a policy.",
+    note: "From a three-generation American panel study. The strength of transmission varies a lot by family.",
     ref: 8,
   },
   {
@@ -46,8 +46,8 @@ export const influences: Influence[] = [
     label: "Faith",
     tint: "ochre",
     example:
-      "In the United States, most adults raised in a religion still identify with it. Of those who leave, the largest group become unaffiliated rather than converts.",
-    note: "A survey finding about one country, not a law of nature.",
+      "In the United States, about eight in ten adults raised Protestant are still Protestant, and six in ten raised Catholic are still Catholic. One in five raised Catholic now have no religion.",
+    note: "Survey findings about one country, not a law of nature.",
     ref: 10,
   },
   {
@@ -107,7 +107,7 @@ export const sources: Source[] = [
     venue: "Pantheon Books",
     url: "https://righteousmind.com/",
     register: "theory",
-    note: "Source of the elephant-and-rider metaphor as used here and the phrase 'intuitions come first, strategic reasoning second'. The metaphor first appears in Haidt's The Happiness Hypothesis (2006).",
+    note: "Source of the elephant-and-rider metaphor as used here. 'Intuitions come first, strategic reasoning second' and 'morality binds and blinds' are the titles of the book's first and third parts. The metaphor first appears in Haidt's The Happiness Hypothesis (2006). The book's site is listed as righteousmind.com in its Wikipedia entry; it was not opened from the build environment.",
     verify: true,
   },
   {
@@ -119,7 +119,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1037/0033-295X.108.4.814",
     register: "theory",
     note: "The academic statement of the model. It explicitly includes links for reasoned persuasion and private reflection changing intuitions.",
-    verify: true,
   },
   {
     n: 3,
@@ -129,8 +128,7 @@ export const sources: Source[] = [
     venue: "Journal of Personality and Social Psychology, 65(4), 613–628",
     url: "https://doi.org/10.1037/0022-3514.65.4.613",
     register: "established",
-    note: "The 'harmless taboo' scenarios paraphrased in Act III come from this study.",
-    verify: true,
+    note: "The 'harmless taboo' scenarios paraphrased in Act III come from this study, which interviewed 360 adults and children of high and low socioeconomic status in Philadelphia, Porto Alegre and Recife.",
   },
   {
     n: 4,
@@ -138,10 +136,9 @@ export const sources: Source[] = [
     year: "2015",
     title: "The curious tale of Julie and Mark: Unraveling the moral dumbfounding effect",
     venue: "Judgment and Decision Making, 10(4), 296–313",
-    url: "https://journal.sjdm.org/15/15213a/jdm15213a.html",
+    url: "https://www.cambridge.org/core/journals/judgment-and-decision-making/article/curious-tale-of-julie-and-mark-unraveling-the-moral-dumbfounding-effect/B8243CAF7E57AFA4F05B6F1199EB0EBF",
     register: "contested",
-    note: "Argues that much apparent 'dumbfounding' dissolves when participants' real beliefs about harm are taken seriously.",
-    verify: true,
+    note: "Open access. Argues that much apparent 'dumbfounding' dissolves when participants' real beliefs about harm are taken seriously.",
   },
   {
     n: 5,
@@ -152,7 +149,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1111/j.1756-8765.2010.01096.x",
     register: "contested",
     note: "A sympathetic critique: reasoning may influence moral judgment more than the social intuitionist model allows.",
-    verify: true,
   },
   {
     n: 6,
@@ -163,7 +159,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1016/B978-0-12-407236-7.00002-4",
     register: "theory",
     note: "The foundations (care, fairness, loyalty, authority, sanctity, and later liberty) that inform the two lenses of Act IV.",
-    verify: true,
   },
   {
     n: 7,
@@ -174,7 +169,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1086/701478",
     register: "contested",
     note: "A rival account of moral pluralism. Included so that moral foundations theory is not presented as the only map.",
-    verify: true,
   },
   {
     n: 8,
@@ -184,7 +178,7 @@ export const sources: Source[] = [
     venue: "The Journal of Politics, 71(3), 782–799",
     url: "https://doi.org/10.1017/S0022381609090719",
     register: "established",
-    verify: true,
+    note: "Three generations of American families, followed from 1965. Transmission was strongest for concrete, affect-laden, repeated attachments and weakest for abstract or historically specific ones.",
   },
   {
     n: 9,
@@ -192,20 +186,19 @@ export const sources: Source[] = [
     year: "2005",
     title: "Are political orientations genetically transmitted?",
     venue: "American Political Science Review, 99(2), 153–167",
-    url: "https://doi.org/10.1017/S0003055405051579",
+    url: "https://www.cambridge.org/core/journals/american-political-science-review/article/are-political-orientations-genetically-transmitted/C6D3A60FBE6779C8E6E798600785A4C9",
     register: "contested",
-    note: "Twin-study evidence that some variation in political attitudes is heritable. The size and meaning of the effect are debated.",
-    verify: true,
+    note: "Twin-study evidence that some variation in political attitudes is heritable, with a smaller role for party identification. The size and meaning of the effect are debated.",
   },
   {
     n: 10,
     authors: "Pew Research Center",
     year: "2016",
     title: "Links between childhood religious upbringing and current religious identity",
-    venue: "Report chapter, 26 October 2016",
+    venue: "Chapter 1 of 'One-in-Five U.S. Adults Were Raised in Interfaith Homes', 26 October 2016",
     url: "https://www.pewresearch.org/religion/2016/10/26/links-between-childhood-religious-upbringing-and-current-religious-identity/",
     register: "established",
-    verify: true,
+    note: "Based on the 2014 U.S. Religious Landscape Study. Retention figures quoted in Act II are from this chapter.",
   },
   {
     n: 11,
@@ -216,7 +209,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1017/S0140525X0999152X",
     register: "established",
     note: "Why findings from Western, educated, industrialised, rich, democratic samples should not be assumed universal.",
-    verify: true,
   },
   {
     n: 12,
@@ -226,7 +218,6 @@ export const sources: Source[] = [
     venue: "Psychological Bulletin, 108(3), 480–498",
     url: "https://doi.org/10.1037/0033-2909.108.3.480",
     register: "established",
-    verify: true,
   },
   {
     n: 13,
@@ -236,8 +227,7 @@ export const sources: Source[] = [
     venue: "Psychological Review, 84(3), 231–259",
     url: "https://doi.org/10.1037/0033-295X.84.3.231",
     register: "established",
-    note: "People confidently report reasons for choices that experiments show did not cause them.",
-    verify: true,
+    note: "People confidently report reasons for choices that experiments show did not cause them. Ericsson and Simon (1980) is the classic rejoinder.",
   },
   {
     n: 14,
@@ -248,7 +238,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1017/S0140525X10000968",
     register: "theory",
     note: "Proposes that reasoning evolved to persuade and to evaluate others' arguments, which explains why it works better in groups than alone.",
-    verify: true,
   },
   {
     n: 15,
@@ -259,7 +248,6 @@ export const sources: Source[] = [
     url: "https://doi.org/10.1207/s15516709cog2605_1",
     register: "established",
     note: "People overestimate how well they understand how things work until asked to explain them.",
-    verify: true,
   },
   {
     n: 16,
@@ -269,7 +257,6 @@ export const sources: Source[] = [
     venue: "Project Gutenberg, ebook 2229 (German text)",
     url: "https://www.gutenberg.org/ebooks/2229",
     register: "established",
-    verify: true,
   },
   {
     n: 17,
@@ -279,7 +266,7 @@ export const sources: Source[] = [
     venue: "Project Gutenberg, ebook 14591 (public-domain English translation)",
     url: "https://www.gutenberg.org/ebooks/14591",
     register: "established",
-    note: "The English lines quoted in Act V follow Taylor's translation; glosses marked 'our gloss' are ours.",
+    note: "The six English lines quoted in Act V are given as Taylor's. The ebook was confirmed; the quoted wording was not checked against its text from the build environment.",
     verify: true,
   },
   {
@@ -291,6 +278,5 @@ export const sources: Source[] = [
     url: "https://www.gutenberg.org/ebooks/34901",
     register: "established",
     note: "Chapter II: 'He who knows only his own side of the case knows little of that.'",
-    verify: true,
   },
 ];
