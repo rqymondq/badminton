@@ -40,6 +40,8 @@ The chain checks reachability before every run. Keep this table honest; it tells
 | Date | Environment | Result |
 |---|---|---|
 | 2026-11-05 | Claude Code cloud, environment for `rqymondq/badminton` | Every host above blocked by the environment's network policy (proxy returned 403 to CONNECT; WebFetch could not resolve the hosts). Reachable: github.com, registry.npmjs.org, pypi.org only. WebSearch works but returns snippets, which are not a source for figures. |
+| 2026-11-05 05:48 UTC | Fresh session started by the scheduled task (same environment) | Still blocked: openinsider.com unresolved; finviz.com, www.sec.gov, stockanalysis.com, finance.yahoo.com refused (proxy 403). Run aborted. |
+| 2026-11-05 05:56 UTC | Fresh probe session after network access was widened | openinsider.com 200, finviz.com 301; www.sec.gov and stockanalysis.com 403 to a bare curl (site-side: SEC wants a declared User-Agent, StockAnalysis wants browser headers). The screen is runnable from fresh sessions. |
 
 ### Domains to allow for the cloud run
 
