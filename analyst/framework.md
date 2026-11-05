@@ -1,5 +1,5 @@
 ---
-framework_version: "1.0"
+framework_version: "1.1"
 updated: 2026-11-05
 ---
 
@@ -21,7 +21,9 @@ A company must pass all five to be ranked. A company that fails one is listed un
 | 2 | Positive free cash flow (trailing twelve months) | Operating cash flow minus capital expenditure, summed over the last four reported quarters | FCF TTM > 0 |
 | 3 | Market cap above $500M | Market capitalisation on the retrieval date | > $500,000,000 |
 | 4 | P/E below the sector average | Trailing P/E versus the trailing P/E of the company's sector, taken from the same source on the same date | 0 < company P/E < sector P/E |
-| 5 | Positive earnings surprise in the last two quarters | Reported EPS versus the consensus estimate for each of the last two reported quarters | Both surprises > 0% |
+| 5 | Positive earnings surprise in the last two quarters | The data vendor's published EPS surprise for each of the last two reported quarters: the EPS the company reports compared with the consensus estimate on the basis the consensus is built on (adjusted or non-GAAP where that is what analysts estimate). One vendor for both quarters of a company, named in the note; the accepted vendors are Yahoo Finance's Earnings History table and Nasdaq's earnings-surprise table. GAAP-versus-estimate pairs are a cross-check, never the criterion figure. | Both surprises > 0%. A surprise of exactly 0% does not pass. |
+
+Basis note on criterion 5: a surprise is measured against consensus, and consensus is built on the basis the company guides on, so the vendor's published surprise is the figure. A GAAP-only screen is a legitimate alternative; switching to it is a one-line change in the row above plus a version bump.
 
 ## Scoring
 
@@ -52,7 +54,7 @@ Adjustments, applied in this order, then clamped to 0–100:
 
 ### Earnings surprise strength (25%)
 
-Inputs: EPS surprise % for the two most recent reported quarters. Both must be positive to pass criterion 5; the score uses their average.
+Inputs: the vendor's EPS surprise % (as defined for criterion 5) for the two most recent reported quarters. Both must be positive to pass criterion 5; the score uses their average.
 
 | Average surprise | Score |
 |---|---|
@@ -81,7 +83,7 @@ A yield at or below zero fails criterion 2 and is not scored.
 
 ### Analyst sentiment (20%)
 
-Net = rating upgrades − rating downgrades by brokerages in the last 90 days. Price-target-only changes do not count. An initiation counts as an upgrade when the rating is Buy, Outperform or Overweight, as a downgrade when it is Sell, Underperform or Underweight, and otherwise not at all.
+Net = rating upgrades − rating downgrades by brokerages in the last 90 days. Price-target-only changes do not count. An initiation counts as an upgrade when the rating is Buy, Outperform or Overweight, as a downgrade when it is Sell, Underperform or Underweight, and otherwise not at all. A resumption of coverage ("Resumed") is treated exactly like an initiation.
 
 | Net | Score |
 |---|---|
@@ -97,7 +99,7 @@ If there were no rating actions at all in the window, the score is 50 and the no
 <!-- scoring-config -->
 ```json
 {
-  "framework_version": "1.0",
+  "framework_version": "1.1",
   "weights": { "insider": 0.30, "surprise": 0.25, "fcf_yield": 0.25, "sentiment": 0.20 },
   "insider": {
     "value_bands_usd": [[0, 20], [50000, 40], [250000, 60], [1000000, 80], [5000000, 90]],
@@ -167,3 +169,4 @@ Default method: intrinsic value per share = TTM free cash flow per share × 15 (
 | Date | Version | Change |
 |---|---|---|
 | 2026-11-05 | 1.0 | Initial framework: criteria, weights and rubric thresholds from the guide's example |
+| 2026-11-05 | 1.1 | Criterion 5 now names the EPS basis: the vendor-published surprise against consensus on the consensus basis, one vendor per company, and exactly 0% does not pass. "Resumed" coverage counts as an initiation for sentiment. The insider screener may be paged (up to five pages) so the full 14-day window is covered. Prompted by the independent checker's cycle-3 findings on the first live screen. |
