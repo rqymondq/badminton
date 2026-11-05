@@ -346,3 +346,25 @@ input[type="range"].lens::-moz-range-thumb {
 @keyframes turn {
   to { transform: rotate(360deg); }
 }
+
+/* ------------------------------------------------------------------
+   Investigation No. 02 — receipt printing
+   ------------------------------------------------------------------ */
+.receipt-paper .receipt-line {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.receipt-paper.is-printed .receipt-line {
+  animation: print 0.5s var(--ease-out) forwards;
+  animation-delay: calc(var(--i, 0) * 110ms + 150ms);
+}
+@keyframes print {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .receipt-paper .receipt-line { opacity: 1; transform: none; animation: none; }
+}
+/* Dot field: each dot reveals as --p (0..1) passes its index */
+.dot-field circle {
+  opacity: clamp(0, calc(var(--p, 1) * var(--n, 1) - var(--i, 0)), 1);
+}

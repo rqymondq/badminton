@@ -1,4 +1,4 @@
-# Launch readiness — Palimpsest, Investigation No. 01
+# Launch readiness — Palimpsest (No. 01 and No. 02)
 
 Prepared for the 30-day public launch experiment. Everything below was checked
 in a production build with Playwright at 390, 820 and 1440 px unless marked
@@ -45,6 +45,13 @@ labelled "Not yet connected" and stores nothing (§5).
 site's own fonts and the ring of influences. `robots.txt` and `sitemap.xml`
 added. Canonical URLs set.
 
+## 1b. Investigation No. 02 (added 5 November 2026)
+
+See `docs/REPORT.md` for the build summary and `docs/RESEARCH_NOTES.md` §3 for the
+status of every figure. Three entries carry the dagger: the DataReportal primary page,
+the Odgers *Nature* review DOI, the Haidt book site, the Simon page reference, and the
+Department of Labor chart URL (details confirmed through indexes; pages not opened).
+
 ## 2. Remaining factual verification
 
 | Item | Status | What to do |
@@ -55,7 +62,10 @@ added. Canonical URLs set.
 | Haidt part titles quoted ("Intuitions come first…", "Morality binds and blinds") | Confirmed via the published table of contents | None |
 | Mill quotation, Chapter II of *On Liberty* | Ebook confirmed; quotation from memory | Search the text for "only his own side" |
 
-Nothing in the text asserts a statistic that is not in a cited source.
+| No. 02: Orben & Przybylski comparison ratios (glasses 1.45×, potatoes 0.9×, marijuana 2.7×, bullying 4.3×, sleep ~44×) | From the OII release and press coverage | Re-read the paper's Fig. 3 medians and adjust the ladder if they differ |
+| No. 02: Taylor-style "from memory" items | None; every number has a located source | — |
+
+Nothing in either text asserts a statistic that is not in a cited source.
 
 ## 3. Website and mobile issues
 
@@ -83,6 +93,7 @@ been run through VoiceOver or NVDA.
   - `instrument_lens_used` {leaning: rules | loyalty | centre}
   - `instrument_ring` {action: kept | released}
   - `invitation_submitted` {provider}
+- `receipt_adjusted` {region}, `instrument_trap_used` {mode}, `instrument_exit` {choice}, `share` {method} (No. 02 and share bar)
 - The text a reader writes in the Flash Judgement or the ring is never sent.
 - The script is loaded from `/_vercel/insights/script.js`, which only exists on
   Vercel; locally it 404s harmlessly (that is the one console notice you will

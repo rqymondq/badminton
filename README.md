@@ -3,10 +3,14 @@
 > A manuscript page scraped clean and written over, the earlier text still showing through. Also: a mind.
 
 Palimpsest is an independent, Renaissance-inspired publication of interactive intellectual journalism.
-This repository holds the publication's front page and its first flagship investigation:
+This repository holds the publication's front page, an investigations index, and two investigations:
+
+**No. 02 — How much is an hour of your attention worth?** (lead)
+Five acts, three instruments (a receipt you print with your own inputs, an association ladder, a
+collective-trap simulation), twenty sources. Shareable personalised receipt cards.
 
 **No. 01 — How much of what you believe is actually yours?**
-Six scroll-driven acts, three interactive instruments, eighteen sources.
+Six acts, three instruments, eighteen sources.
 
 ## Running it
 
@@ -15,7 +19,7 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:3000>. The investigation lives at `/investigations/what-you-believe`.
+Open <http://localhost:3000>. Investigations live at `/investigations`, `/investigations/attention` and `/investigations/what-you-believe`.
 
 ```bash
 npm run build   # production build (static, no backend)
@@ -30,15 +34,22 @@ Fonts are self-hosted via Fontsource; every illustration is drawn in code.
 
 | Path | What |
 | --- | --- |
-| `docs/CREATIVE_DIRECTION.md` | Identity, design principles, colour, type, the role of motion, one-line act concepts |
-| `docs/STORYBOARD.md` | Act-by-act storyboard: what you see, what scroll changes, what you can touch, what the visual argues |
+| `docs/STRATEGY.md` | Audience, differentiation, distribution, retention, business model, validation, the 30-day plan |
+| `docs/RESEARCH_NOTES.md` | Market research and the evidence base for No. 02, with verification status |
+| `docs/DESIGN_SYSTEM.md` | Surfaces, colour, type, apparatus, motion rules, per-investigation motifs |
+| `docs/REPORT.md` | Final report: what was built, tests, limitations, risks, next steps |
+| `docs/CREATIVE_DIRECTION.md` | Original identity brief, design principles, one-line act concepts |
+| `docs/STORYBOARD.md`, `docs/STORYBOARD-02.md` | Act-by-act storyboards for No. 01 and No. 02 |
 | `src/app/globals.css` | Design tokens (surfaces, type scale, registers), typographic voices |
 | `src/app/page.tsx` | Front page |
 | `src/app/about/page.tsx` | About |
-| `src/app/investigations/[slug]/page.tsx` | Story route; maps a slug from the registry to a story component |
+| `src/app/investigations/page.tsx` | Investigations index |
+| `src/app/investigations/[slug]/page.tsx` | Story route; maps a slug to a story component; JSON-LD; personalised share metadata |
+| `src/app/api/og/receipt/route.tsx` | Personalised receipt share card (two public inputs) |
 | `src/content/investigations.ts` | Registry of investigations and future desks |
-| `src/components/story/*` | Reusable story primitives: `Act`, `ActHead`, `Prose`, `Spread`, `Aside`, `Figure`, `Pull`, `Ref`, `RegisterTag`, `StoryShell` |
-| `src/stories/what-you-believe/*` | The flagship: `ActOne` … `ActSix`, `ElephantScene`, `FlashJudgement`, `Sources`, `data.ts` |
+| `src/components/story/*` | Reusable story primitives: `Act`, `ActHead`, `Prose`, `Spread`, `Aside`, `Figure`, `Pull`, `Ref`, `RegisterTag`, `StoryShell`, `Sources`, `ShareBar`, `NextInvestigation` |
+| `src/stories/attention/*` | No. 02: `figures.ts` (every number and its derivation), `Receipt`, `DotField`, `Ladder`, `Trap`, `ActOne` … `ActFive`, `data.ts` |
+| `src/stories/what-you-believe/*` | No. 01: `ActOne` … `ActSix`, `ElephantScene`, `FlashJudgement`, `data.ts` |
 | `src/lib/motion.ts` | GSAP + ScrollTrigger registration, reduced-motion and compact-viewport hooks, seeded RNG |
 
 ## Adding an investigation

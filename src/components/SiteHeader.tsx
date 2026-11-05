@@ -16,7 +16,7 @@ export function SiteHeader({
     >
       <Wordmark size="sm" />
       <nav aria-label="Primary" className="flex items-center gap-6">
-        <Link href="/#investigations" className="mono ink-link">
+        <Link href="/investigations" className="mono ink-link">
           Investigations
         </Link>
         <Link href="/#desks" className="mono ink-link hidden sm:inline">

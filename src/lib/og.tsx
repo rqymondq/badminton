@@ -126,3 +126,57 @@ export async function investigationImage(opts: { number: string; desk: string; r
     { ...ogSize, fonts: await fonts() },
   );
 }
+
+/** Investigation No. 02: a receipt for one hour of attention, with the sender's inputs. */
+export async function receiptImage(opts: { region: string; hours: number }) {
+  const { computeReceipt, money, usd, big, hoursLabel, US_MIN_WAGE, META } = await import("@/stories/attention/figures");
+  const r = computeReceipt(opts.region, opts.hours);
+  const row = (label: string, value: string, strong = false) => (
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, fontFamily: "Plex Mono", fontSize: 18, color: strong ? palette.ink : "#4B4642" }}>
+      <span>{label}</span>
+      <span>{value}</span>
+    </div>
+  );
+  return new ImageResponse(
+    (
+      <div style={{ display: "flex", width: "100%", height: "100%", background: palette.ink, color: palette.parchment, position: "relative" }}>
+        <div style={{ position: "absolute", left: 64, top: 56, display: "flex", gap: 18 }}>
+          <Mono style={{ color: palette.parchment }}>Palimpsest</Mono>
+          <Mono>· Investigation No. 02 · Power</Mono>
+        </div>
+        <div style={{ position: "absolute", left: 64, top: 130, display: "flex", flexDirection: "column", width: 560 }}>
+          <div style={{ fontFamily: "Fraunces", fontSize: 34, color: palette.stone2, lineHeight: 1 }}>How much is</div>
+          <div style={{ fontFamily: "Fraunces", fontSize: 78, lineHeight: 0.98, letterSpacing: -2, marginTop: 10 }}>an hour of your</div>
+          <div style={{ fontFamily: "Fraunces", fontSize: 78, lineHeight: 0.98, letterSpacing: -2, color: palette.vermilion }}>attention worth?</div>
+          <div style={{ fontFamily: "Fraunces", fontStyle: "italic", fontSize: 30, color: palette.stone2, marginTop: 28, lineHeight: 1.2 }}>
+            {`In ${r.region.short}, by Meta’s own accounts: about ${money(r.perHour)}.`}
+          </div>
+        </div>
+        {/* the receipt */}
+        <div style={{ position: "absolute", right: 64, top: 48, width: 420, display: "flex", flexDirection: "column", background: "#E7DCC6", color: palette.ink, padding: "28px 30px", gap: 10 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "Plex Mono", fontSize: 16, letterSpacing: 2, textTransform: "uppercase" }}>
+            <span>Palimpsest</span>
+            <span style={{ color: "#4B4642" }}>Receipt No. 02</span>
+          </div>
+          <div style={{ display: "flex", borderTop: "1px dashed #9A9087", marginTop: 6 }} />
+          {row("Issued to", `One person, ${r.region.short}`)}
+          {row("Attention supplied", `${hoursLabel(r.hoursPerDay)} / day`)}
+          {row("Quantity", `${big(r.hoursPerYear)} h / year`)}
+          {row(`Revenue to Meta, ${META.fiscalYear}`, usd(r.perYear), true)}
+          <div style={{ display: "flex", borderTop: "1px dashed #9A9087", marginTop: 6 }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+            <span style={{ fontFamily: "Plex Mono", fontSize: 16, letterSpacing: 2, textTransform: "uppercase" }}>Price per hour</span>
+            <span style={{ fontFamily: "Fraunces", fontSize: 76, lineHeight: 0.9, color: palette.oxblood }}>{money(r.perHour)}</span>
+          </div>
+          <div style={{ display: "flex", borderTop: "1px dashed #9A9087", marginTop: 6 }} />
+          {row("US federal minimum wage", `${usd(US_MIN_WAGE)} / hour`)}
+          {row("Your hour, as sold", `1 / ${big(Math.round(r.minWageHours))} of that`, true)}
+        </div>
+        <div style={{ position: "absolute", left: 64, bottom: 52, display: "flex" }}>
+          <Mono>Five acts · three instruments · twenty sources</Mono>
+        </div>
+      </div>
+    ),
+    { ...ogSize, fonts: await fonts() },
+  );
+}

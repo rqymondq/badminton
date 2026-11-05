@@ -8,6 +8,9 @@ import { ActFive } from "./ActFive";
 import { ActSix } from "./ActSix";
 import { Sources } from "./Sources";
 import { Invitation } from "@/components/Invitation";
+import { NextInvestigation } from "@/components/story/NextInvestigation";
+import { ShareBar } from "@/components/story/ShareBar";
+import { Column } from "@/components/story/Prose";
 
 export const acts: ActNav[] = [
   { id: "act-i", numeral: "I", title: "The Question" },
@@ -43,6 +46,14 @@ export default function WhatYouBelieve() {
         <div aria-hidden className="h-[24svh] bg-gradient-to-b from-[#0e1220] via-[#5b4a3f] to-parchment" />
         <Act id="act-vi" numeral="VI" title="The Unfinished Mind" surface="parchment">
           <ActSix />
+          <Column className="pb-20">
+            <ShareBar
+              title="How much of what you believe is actually yours?"
+              text="An interactive inquiry into where our convictions come from, and why our reasons arrive after our conclusions."
+              path="/investigations/what-you-believe"
+            />
+          </Column>
+          <NextInvestigation current="what-you-believe" />
           <Invitation />
           <Sources />
         </Act>

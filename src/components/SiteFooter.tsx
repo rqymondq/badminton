@@ -16,6 +16,8 @@ export function SiteFooter() {
             <p className="mono mb-3 text-fg-3">Navigate</p>
             <ul className="space-y-1.5 text-fg-2">
               <li><Link className="ink-link" href="/">Front page</Link></li>
+              <li><Link className="ink-link" href="/investigations">All investigations</Link></li>
+              <li><Link className="ink-link" href="/investigations/attention">No. 02 — Your attention</Link></li>
               <li><Link className="ink-link" href="/investigations/what-you-believe">No. 01 — What you believe</Link></li>
               <li><Link className="ink-link" href="/about">About</Link></li>
             </ul>

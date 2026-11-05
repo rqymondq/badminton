@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RingMark } from "@/components/RingMark";
+import { ReceiptMark } from "@/components/ReceiptMark";
 import { Invitation } from "@/components/Invitation";
 import type { Metadata } from "next";
 import { desks, investigations } from "@/content/investigations";
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const featured = investigations[0];
-  const issueDate = new Date(featured.published).toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+  const lead = investigations[0];
+  const second = investigations[1];
+  const published = new Set(investigations.map((i) => i.desk));
+  const issueDate = new Date(lead.published).toLocaleDateString("en-GB", { month: "long", year: "numeric" });
 
   return (
     <>
@@ -63,36 +66,63 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured investigation */}
+        {/* Lead investigation: No. 02 */}
         <section id="investigations" data-surface="ink" className="relative overflow-hidden px-[var(--gutter)] py-20 md:py-28">
-          <div className="mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
+          <div className="mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
             <div>
               <p className="mono text-fg-3">
-                Investigation {featured.number} <span aria-hidden className="mx-2">·</span> {featured.desk}{" "}
-                <span aria-hidden className="mx-2">·</span> {featured.readingTime}
+                Investigation {lead.number} <span aria-hidden className="mx-2">·</span> {lead.desk}{" "}
+                <span aria-hidden className="mx-2">·</span> {lead.readingTime} <span aria-hidden className="mx-2">·</span>{" "}
+                <span className="text-accent">Latest</span>
               </p>
-              <Link href={`/investigations/${featured.slug}`} className="group mt-8 block no-underline">
-                <span className="display-light block text-[length:var(--step-2)] text-fg-2">How much</span>
-                <span className="display block text-[length:var(--step-5)] text-fg">of what you believe</span>
-                <span className="display block text-[length:var(--step-3)] italic text-fg-2" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80, "WONK" 1' }}>
-                  is actually
-                </span>
+              <Link href={`/investigations/${lead.slug}`} className="group mt-8 block no-underline">
+                <span className="display-light block text-[length:var(--step-2)] text-fg-2">How much is</span>
+                <span className="display block text-[length:var(--step-5)] text-fg">an hour of your</span>
                 <span className="display-strong block text-[length:var(--step-5)] text-vermilion-2 transition-transform duration-700 ease-[var(--ease-out)] group-hover:translate-x-2">
-                  yours?
+                  attention worth?
                 </span>
               </Link>
-              <p className="mt-8 max-w-[52ch] text-[length:var(--step-0)] leading-relaxed text-fg-2">{featured.dek}</p>
+              <p className="mt-8 max-w-[52ch] text-[length:var(--step-0)] leading-relaxed text-fg-2">{lead.dek}</p>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <Link
-                  href={`/investigations/${featured.slug}`}
+                  href={`/investigations/${lead.slug}`}
                   className="mono inline-flex items-center gap-3 border border-fg px-5 py-3 no-underline transition-colors hover:bg-fg hover:text-bg focus-visible:bg-fg focus-visible:text-bg"
                 >
-                  Begin the inquiry <span aria-hidden>→</span>
+                  Print your receipt <span aria-hidden>→</span>
                 </Link>
-                <p className="mono-lc text-fg-3">Six acts · three instruments · eighteen sources</p>
+                <p className="mono-lc text-fg-3">{lead.shape}</p>
               </div>
             </div>
-            <RingMark className="mx-auto w-full max-w-[420px] lg:max-w-none" />
+            <ReceiptMark className="mx-auto w-full max-w-[22rem] lg:max-w-[24rem]" />
+          </div>
+        </section>
+
+        {/* Second investigation: No. 01 */}
+        <section data-surface="parchment" className="border-b border-rule px-[var(--gutter)] py-16 md:py-24">
+          <div className="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <div data-surface="ink" className="order-2 mx-auto w-full max-w-[18rem] p-5 lg:order-1 lg:max-w-[22rem]">
+              <RingMark />
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="mono text-fg-3">
+                Investigation {second.number} <span aria-hidden className="mx-2">·</span> {second.desk}{" "}
+                <span aria-hidden className="mx-2">·</span> {second.readingTime}
+              </p>
+              <Link href={`/investigations/${second.slug}`} className="group mt-5 block no-underline">
+                <span className="display block max-w-[16ch] text-[length:var(--step-4)] leading-[1] text-fg transition-transform duration-500 ease-[var(--ease-out)] group-hover:translate-x-1">
+                  {second.title}
+                </span>
+              </Link>
+              <p className="mt-6 max-w-[52ch] text-[length:var(--step-0)] leading-relaxed text-fg-2">{second.promise}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-6">
+                <Link href={`/investigations/${second.slug}`} className="mono ink-link">
+                  Begin the inquiry <span aria-hidden>→</span>
+                </Link>
+                <Link href="/investigations" className="mono ink-link text-fg-3">
+                  All investigations
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -105,7 +135,7 @@ export default function Home() {
                 <p className="display mt-2 text-[length:var(--step-3)]">Six standing questions</p>
               </div>
               <p className="mono-lc max-w-[40ch] text-fg-3">
-                Future editorial territories. These are concepts in preparation, not published work. Each desk opens with the question it exists to keep asking.
+                Two desks have published. The rest are concepts in preparation, not published work. Each desk opens with the question it exists to keep asking.
               </p>
             </div>
             <ol className="divide-y divide-rule">
@@ -114,7 +144,9 @@ export default function Home() {
                   <span className="mono text-fg-3">{d.numeral}</span>
                   <span className="display text-[length:var(--step-2)]">{d.name}</span>
                   <span className="serif col-span-2 text-[length:var(--step-1)] text-fg-2 md:col-span-1">{d.question}</span>
-                  <span className="register col-start-2 md:col-start-4" data-level="contested">In preparation</span>
+                  <span className="register col-start-2 md:col-start-4" data-level={published.has(d.name) ? "established" : "contested"}>
+                    {published.has(d.name) ? "1 investigation" : "In preparation"}
+                  </span>
                 </li>
               ))}
             </ol>
