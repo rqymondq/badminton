@@ -27,6 +27,7 @@ If state.md holds no screens yet, say so in one line and move on.
 ## Step 2: candidate universe
 
 - Pull open-market insider purchases (Form 4 code P) filed in the last 14 days from the primary insider source. Record URL and retrieval time.
+- If the first page is full (100 rows) and its oldest filing date is still inside the 14-day window, fetch the next page, pausing between requests, up to five pages, and record each URL and retrieval time.
 - Keep companies whose total purchase value in the window is at least `screen.min_purchase_value_usd_per_company`. Collapse to one row per ticker: total value, distinct buyers, most senior buyer title, whether any insider sold in the window.
 - Drop anything at or below `screen.min_market_cap_usd` as soon as you have a sourced market cap.
 - If more than `screen.max_candidates` remain, keep the largest by purchase value and say so in the note.
