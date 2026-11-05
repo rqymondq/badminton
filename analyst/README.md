@@ -80,11 +80,11 @@ Then, from the repository root: `claude`, and say "run the weekly screen".
 
 ### B. Claude Code cloud (where this was built)
 
-The skills fall back to WebFetch, WebSearch and curl, but outbound hosts are limited by the environment's network policy. On 2026-11-05 every financial host was blocked, so the first screen could not be run from the cloud. The exact domain list to allow is in `sources.md` under "Domains to allow"; the steps are at https://code.claude.com/docs/en/cloud-environments#network-access. Once allowed, the chain runs in the cloud unchanged. Until then a cloud run writes an ABORTED note that names the blocked hosts and never invents a figure.
+The skills fall back to WebFetch, WebSearch and curl, but outbound hosts are limited by the environment's network policy, and a session reads that policy once, when it starts. On 2026-11-05 every financial host was blocked until the policy was widened; after that, fresh sessions reached openinsider.com and finviz.com, while www.sec.gov and stockanalysis.com answered 403 to a bare curl (the SEC wants a descriptive User-Agent; StockAnalysis wants browser headers). The reachability log and the domain list are in `sources.md`; the steps are at https://code.claude.com/docs/en/cloud-environments#network-access. A cloud run that cannot reach any insider source writes an ABORTED note and never invents a figure.
 
 ### C. The weekly scheduled task
 
-A scheduled task named **Weekly stock screen** starts a fresh cloud session every Monday at 05:40 America/New_York, checks out the branch that holds this folder, runs `weekly-screen`, and commits and pushes the note, the check and the state entry. You wake up to a passed, sourced, ranked watchlist, or to an honest ABORTED note. To change the day or time, or to stop it, ask Claude Code to update or delete the scheduled task named Weekly stock screen.
+A scheduled task named **Weekly stock screen** fires every Monday at 05:40 America/New_York into a standing session called **Weekly screen runner**. That session was created with this repository as its source, so it holds push rights; a session that a scheduled task starts from scratch does not, which is how the first run lost its commit. Each firing resumes the runner: it pulls the branch, runs `weekly-screen`, and commits and pushes the note, the check and the state entry. You wake up to a passed, sourced, ranked watchlist, or to an honest ABORTED note. To change the day or time, or to stop it, ask Claude Code to update or delete the scheduled task named Weekly stock screen; if the runner session is ever archived, ask for a new runner created with the repository as its source and the task re-bound to it.
 
 ## Weekly rhythm
 
