@@ -86,6 +86,8 @@ The skills fall back to WebFetch, WebSearch and curl, but outbound hosts are lim
 
 A scheduled task named **Weekly stock screen** fires every Monday at 05:40 America/New_York into a standing session called **Weekly screen runner**. That session was created with this repository as its source, so it holds push rights; a session that a scheduled task starts from scratch does not, which is how the first run lost its commit. Each firing resumes the runner: it pulls the branch, runs `weekly-screen`, and commits and pushes the note, the check and the state entry. You wake up to a passed, sourced, ranked watchlist, or to an honest ABORTED note. To change the day or time, or to stop it, ask Claude Code to update or delete the scheduled task named Weekly stock screen; if the runner session is ever archived, ask for a new runner created with the repository as its source and the task re-bound to it.
 
+A second scheduled task, **Weekly stock screen watchdog**, fires into the parent session every Monday at 07:40 America/New_York. If no "Weekly screen" commit has landed since the runner's firing it nudges or replaces the runner, so a missed morning is caught the same morning. It exists because the 9 November run was missed: the runner's container had gone dormant with a turn still open, and both that firing and the next reached it only on 16 November.
+
 ## Weekly rhythm
 
 1. Monday morning: read `screens/<date>.md`. Ten minutes. Check the numbers you care about against the primary source linked in the source log.
